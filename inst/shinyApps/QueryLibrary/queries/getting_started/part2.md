@@ -28,23 +28,16 @@ Group:Getting Started
 
 
  
-
-## Description
-There are many use cases for subsetting a CDM
-population, often by phenotype.
-
-The SQL in the QueryLibrary makes these set operations
-very simple.
-
-
-
- 
 ## Query
 ```sql
-SELECT count(*) AS person_count FROM person
+SELECT COUNT(*) AS person_count FROM person
 
 -- INNER JOIN is so named because it is analogous
 -- to finding the intersection of two or more sets.
+-- See the linked queries in the CTE section
+-- to understand how these subsets are created.
+-- The QueryLibrary includes many prebuilt queries
+-- for this, including the OHDSI phenotype library.
 INNER JOIN female USING gender_concept_id
 INNER JOIN hiv USING person_id
 
@@ -70,8 +63,6 @@ INNER JOIN uninsured USING person_id
 -- See the ## CTE Exclusion section below for an example.
 LEFT JOIN insured USING person_id
 WHERE insured.person_id IS NULL
-
-> Continue to [Part 3](./part3.md)
 ```
 
 
@@ -99,6 +90,13 @@ WHERE insured.person_id IS NULL
 - [uninsured](./insured.md) The insured query is expected to be used as an exlusion criteria. 
 
 
+
+
+
+ 
+
+## Description
+> Continue to [Part 3](./part3.md)
 
 
 

@@ -34,8 +34,8 @@ SELECT
 
 	-- 1. Agree on the "dimensions" of your
 	--    database characterization with your data partners.
-	--    You may use these dimensions to stratify
-	--    your measures.
+	--    You may choose from these dimensions to stratify
+	--    your measures when analysing the cube.
 	gender,
 	acetaminophen_dosage_month,
 
@@ -52,7 +52,7 @@ SELECT
 	sum(acetaminophen_dosage) AS sum_acetaminophen_dosage
 	-- Note: while "count" is decomposable
 	-- "distinct count" is not.
-	count(acetaminophen_dosage.person_id) AS acetaminophen_person_count
+	COUNT(acetaminophen_dosage.person_id) AS acetaminophen_person_count
 
 -- The rest is SQL boilerplate.
 FROM person
@@ -64,6 +64,19 @@ GROUP BY
 	gender,
 	acetaminophen_dosage_month
 ```
+
+
+ 
+
+## Output
+
+
+
+ 
+
+## Example output record
+
+
 
 
  
@@ -115,19 +128,6 @@ share these decisions as a computable specification
 using plain SQL similar to the example in this document.
 
 > Continue to [Part 4](./part4.md)
-
-
-
- 
-
-## Output
-
-
-
- 
-
-## Example output record
-
 
 
 

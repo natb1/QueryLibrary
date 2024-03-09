@@ -32,7 +32,7 @@ Use Case:Getting Started
 ```sql
 -- The QueryLibrary is just SQL using the 
 -- Common Data Model (CDM).
-SELECT count(*) AS person_count FROM person
+SELECT COUNT(*) AS person_count FROM person
 
 -- Common Table Expressions (CTEs)
 -- can be used to write concise queries
