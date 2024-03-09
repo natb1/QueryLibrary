@@ -1,4 +1,18 @@
+<!--
 
+
+Author:Nathan Buesgens
+
+
+
+CDM Version:5.4
+
+
+
+Group:Getting Started
+
+
+-->
 
 # Getting Started: Part 3
 
@@ -13,28 +27,31 @@
 
 
 
-	 
+ 
 ## Query
 ```sql
 SELECT
 
-	-- 1. Agree on dimensions with your data partners.
+	-- 1. Agree on the "dimensions" of your
+	--    database characterization with your data partners.
+	--    You may use these dimensions to stratify
+	--    your measures.
 	gender,
 	acetaminophen_dosage_month,
 
-	-- 2. Agree on measures.
+	-- 2. Agree on the measures to share.
 	--    For example, share the distribution of
 	--    of person ages across the chosen dimensions.
 	min(age) AS min_age,
 	-- These measures may be constrained for privacy
 	-- reasons.
-	CASE WHEN max(age) &lt; 80 THEN max(age) ELSE 80 as max_age
+	CASE WHEN max(age) < 80 THEN max(age) ELSE 80 as max_age
 	-- Your summary may include measures
 	-- from the query library, or you can
 	-- create your own.
 	sum(acetaminophen_dosage) AS sum_acetaminophen_dosage
-	-- Note: while &#34;count&#34; is decomposable
-	-- &#34;distinct count&#34; is not.
+	-- Note: while "count" is decomposable
+	-- "distinct count" is not.
 	count(acetaminophen_dosage.person_id) AS acetaminophen_person_count
 
 -- The rest is SQL boilerplate.
@@ -49,14 +66,16 @@ GROUP BY
 ```
 
 
-	 
+ 
 
 ## Description
-A &#34;cube&#34; is a common data structure
+A "cube" is a common data structure
 used to summarize a data set. It has
 some limitations. Namely, it can only
-be used for &#34;decomposable&#34; summary metrics.
-Summary functions such as the median are
+be used for 
+[decomposable](https://en.wikipedia.org/wiki/Aggregate_function#Decomposable_aggregate_functions)
+summary metrics.
+Some metrics such as the median are
 not decomposable and so cannot be efficiently
 represented in this data structure.
 
@@ -81,7 +100,7 @@ can be referred to as [CDM Database Characterization](https://ohdsi.github.io/Th
 database using a cube
 involves agreeing with your data partners
 on two things:
-- The &#34;dimensions&#34; used to stratify the summary
+- The "dimensions" used to stratify the summary
 	measures. For example, this could include
 	gender, and time.
 - The (decomposable) measures, such as counts,
@@ -95,35 +114,42 @@ The QueryLibrary can be used to document and
 share these decisions as a computable specification
 using plain SQL similar to the example in this document.
 
-&gt; Continue to [Part 4](./part4.md)
+> Continue to [Part 4](./part4.md)
 
 
 
-	 
+ 
+
+## Output
 
 
-	 
+
+ 
+
+## Example output record
 
 
-	
+
+
+
 
 ## Common Table Expression (CTE)
 
 
-- [acetaminophen_dosage]({./acetaminophen_dosage.md A query of person dosages by month.}) 
+- [acetaminophen_dosage](./acetaminophen_dosage.md) A query of person dosages by month. 
 
 
 
 
-- [age]({./age.md Person age}) 
+- [age](./age.md) Person age 
 
 
 
 
-- [gender]({./gender.md A query of gender concepts}) 
+- [gender](./gender.md) A query of gender concepts 
 
 
 
 
 
-	
+

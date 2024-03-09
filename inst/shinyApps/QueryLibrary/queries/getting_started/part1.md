@@ -1,4 +1,18 @@
+<!--
 
+
+Author:Nathan Buesgens
+
+
+
+CDM Version:5.4
+
+
+
+Use Case:Getting Started
+
+
+-->
 
 # Getting Started
 
@@ -27,12 +41,12 @@ INNER JOIN female USING gender_concept_id
 INNER JOIN hiv USING person_id
 
 -- CTEs can isolate logic from different SQL dialects.
--- See the links for the age &#34;alias&#34; in the next section.
-JOIN age USING person_id
+-- See the links for the age "alias" in the next section.
+LEFT JOIN age USING person_id
 
 -- Input parameters allow the query to be 
 -- used as a template.
-WHERE age &gt; @min_age
+WHERE age > @min_age
 ```
 
 
@@ -41,15 +55,20 @@ WHERE age &gt; @min_age
 ## Common Table Expression (CTE)
 
 
-- [age]({./age.md By HADES convention SQL queries use MS SQL Server dialect.}) 
+- [age](./age.md) By HADES convention SQL queries use MS SQL Server dialect. 
 
 
-- [age]({./dialect/sqlite/age.md But, referefences can be provided for any dialect.}) 
+- [age](./dialect/sqlite/age.md) But, references can be provided for any dialect. 
 
 
 
 
-- [female]({./female.md A simple query for the female gender concept.}) 
+- [female](./female.md) A simple query for the female gender concept. 
+
+
+
+
+- [hiv](./hiv.md) A query for persons using the OHDSI phenotype library. 
 
 
 
@@ -57,11 +76,31 @@ WHERE age &gt; @min_age
 
  
 
+## Input
+| PARAMETER | EXAMPLE | MANDATORY |                             NOTES                             |
+|-----------|---------|-----------|---------------------------------------------------------------|
+| @min_age  |      18 | true      | Parameters allow QueryLibrary users to share query templates. |
+
+
+
 
  
 
+## Output
+|    FIELD     |         DESCRIPTION         |
+|--------------|-----------------------------|
+| person_count | An example summary measure. |
+
+
 
  
+
+## Example output record
+|    FIELD     | VALUE |
+|--------------|-------|
+| person_count |   100 |
+
+
 
 
  
@@ -92,12 +131,12 @@ applications has several benefits:
 The QueryLibrary markdown specification allows a
 health site to take a variety of complex 
 data management problems
-(data literacy, data quality, data lineage, etc.)
+(data literacy, data quality, database characterization, etc.)
 which are sometimes addressed with proprietary 
 solutions, and instead reframe those problems as
 simple markdown parsing problems.
 
-&gt; Continue to [Part 2](./part2.md)
+> Continue to [Part 2](./part2.md)
 
 
 

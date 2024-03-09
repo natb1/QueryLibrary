@@ -1,4 +1,18 @@
+<!--
 
+
+Author:Nathan Buesgens
+
+
+
+CDM Version:5.4
+
+
+
+Group:Getting Started
+
+
+-->
 
 # Getting Started: Part 4
 
@@ -17,7 +31,7 @@
 
 ## Description
 In this query three example data partners are named 
-&#34;eunomia&#34;, &#34;synthea&#34;, and &#34;mimic&#34;. They 
+"eunomia", "synthea", and "mimic". They 
 have all shared and executed the query in part 3
 in order to create a database characterization.
 Data partners can use their preferred method
@@ -38,23 +52,23 @@ these partners in a particular study.
 
 SELECT partner AS eligible_partner
 FROM (
-	SELECT *, &#34;eunomia&#34; AS partner FROM eunomia_partner
+	SELECT *, "eunomia" AS partner FROM eunomia_partner
 	UNION ALL 
-	SELECT *, &#34;sythea&#34; AS partner FROM synthea_partner
+	SELECT *, "sythea" AS partner FROM synthea_partner
 	UNION ALL 
-	SELECT *, &#34;mimic&#34; AS partner FROM mimic_partner
+	SELECT *, "mimic" AS partner FROM mimic_partner
 )
 
 -- At least 100 persons with acetaminophen dosage
 -- for each of the given months, for each of the
 -- given genders.
 WHERE
-	month &gt; &#34;2020-01&#34;
+	month > "2020-01"
 	AND (
-		gender_concept_name IN (&#34;Male&#34;, &#34;Female&#34;)
+		gender_concept_name IN ("Male", "Female")
 	)
 GROUP BY partner
-HAVING min(acetaminophen_person_count) &gt; 100
+HAVING min(acetaminophen_person_count) > 100
   
 ```
 
@@ -64,23 +78,26 @@ HAVING min(acetaminophen_person_count) &gt; 100
 ## Common Table Expression (CTE)
 
 
-- [eunomia_partner]({./example_data/eunomia_partner.md Example database characterization from &#39;Eunomia&#39; partner}) 
+- [eunomia_partner](./example_data/eunomia_partner.md) Example database characterization from 'Eunomia' partner 
 
 
 
 
-- [mimix_partner]({./example_data/mimic_partner.md Example database characterization from &#39;Mimic&#39; partner}) 
+- [mimix_partner](./example_data/mimic_partner.md) Example database characterization from 'Mimic' partner 
 
 
 
 
-- [synthea_partner]({./example_data/synthea_partner.md Example database characterization from &#39;Synthea&#39; partner}) 
+- [synthea_partner](./example_data/synthea_partner.md) Example database characterization from 'Synthea' partner 
 
 
 
 
 
 		 
+
+## Output
+
 
 
 		

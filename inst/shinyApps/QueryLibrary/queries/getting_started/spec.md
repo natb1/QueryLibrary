@@ -1,5 +1,4 @@
-
-### QueryLibrary Markdown Specification
+# QueryLibrary Markdown Specification
 
 Most QueryLibrary extensions to the markdown specification
 involve special treatment of document "sections"

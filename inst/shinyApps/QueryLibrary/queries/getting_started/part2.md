@@ -1,4 +1,18 @@
+<!--
 
+
+Author:Nathan Buesgens
+
+
+
+CDM Version:5.4
+
+
+
+Group:Getting Started
+
+
+-->
 
 # Getting Started: Part 2
 
@@ -39,12 +53,12 @@ INNER JOIN hiv USING person_id
 -- set operations and the implementation may have a
 -- performance impact that differs depending
 -- on your data platform. The SQL syntax
--- here is generally performant, and doesn&#39;t rely
+-- here is generally performant, and doesn't rely
 -- on features of any one dialect.
 
 -- The most concise way to create exclusion criteria would
--- be to INNER JOIN a suqquery that is the &#34;anti-set&#34;, 
--- ex. &#34;not insured&#34;:
+-- be to INNER JOIN a suqquery that is the "anti-set", 
+-- ex. "not insured":
 INNER JOIN uninsured USING person_id
 
 -- Or, if doing so is inconvenient,
@@ -57,7 +71,7 @@ INNER JOIN uninsured USING person_id
 LEFT JOIN insured USING person_id
 WHERE insured.person_id IS NULL
 
-&gt; Continue to [Part 3](./part3.md)
+> Continue to [Part 3](./part3.md)
 ```
 
 
@@ -66,12 +80,12 @@ WHERE insured.person_id IS NULL
 ## Common Table Expression (CTE)
 
 
-- [female]({./female.md A simple query for the female gender concept.}) 
+- [female](./female.md) A simple query for the female gender concept. 
 
 
 
 
-- [hiv]({./hiv.md A query of persons using the phenotype library.}) 
+- [hiv](./hiv.md) A query of persons using the phenotype library. 
 
 
 
@@ -82,7 +96,7 @@ WHERE insured.person_id IS NULL
 ## CTE Exclusion
 
 
-- [uninsured]({./insured.md The insured query is expected to be used as an exlusion criteria.}) 
+- [uninsured](./insured.md) The insured query is expected to be used as an exlusion criteria. 
 
 
 
