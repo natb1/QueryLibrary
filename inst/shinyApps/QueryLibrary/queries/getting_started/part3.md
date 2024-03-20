@@ -35,7 +35,7 @@ SELECT
 	-- 1. Agree on the "dimensions" of your
 	--    database characterization with your data partners.
 	--    You may choose from these dimensions to stratify
-	--    your measures when analysing the cube.
+	--    your measures when analysing the data.
 	gender,
 	acetaminophen_dosage_month,
 
