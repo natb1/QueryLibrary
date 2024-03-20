@@ -12,6 +12,10 @@ CDM Version:5.4
 Use Case:Getting Started
 
 
+
+_Short:PGNvZGUgY2xhc3M9InNxbCI+LS0gV09SSyBJTiBQUk9HUkVTUwotLSAxLiBBZ3JlZSBvbiB0aGUgImRpbWVuc2lvbnMiIG9mIHlvdXIKLS0gICAgZGF0YWJhc2UgY2hhcmFjdGVyaXphdGlvbiB3aXRoIHlvdXIgZGF0YSBwYXJ0bmVycy4KZ2VuZGVyLAotLSBXSVA6IGZ1bGwgY29ob3J0IGVudHJ5IGV4aXQgY3JpdGVyaWEgZXRjLgphY2V0YW1pbm9waGVuX2Rvc2FnZV9tb250aCwKLS0gMi4gQWdyZWUgb24gdGhlIG1lYXN1cmVzIHRvIHNoYXJlLgptaW4oYWdlKSBBUyBtaW5fYWdlLAotLSBUaGVzZSBtZWFzdXJlcyBtYXkgYmUgY29uc3RyYWluZWQgZm9yIHByaXZhY3kgcmVhc29ucy4KQ0FTRSBXSEVOIG1heChhZ2UpIDwgODAgVEhFTiBtYXgoYWdlKSBFTFNFIDgwIGFzIG1heF9hZ2UKPC9jb2RlPiAuLi4=
+
+
 -->
 
 # Getting Started: Part 3
@@ -32,19 +36,21 @@ Use Case:Getting Started
 ```sql
 SELECT
 
+  -- WORK IN PROGRESS
+
 	-- 1. Agree on the "dimensions" of your
 	--    database characterization with your data partners.
 	--    You may choose from these dimensions to stratify
 	--    your measures when analysing the data.
 	gender,
+	-- WIP: full cohort entry exit criteria etc.
 	acetaminophen_dosage_month,
 
 	-- 2. Agree on the measures to share.
 	--    For example, share the distribution of
 	--    of person ages across the chosen dimensions.
 	min(age) AS min_age,
-	-- These measures may be constrained for privacy
-	-- reasons.
+	-- These measures may be constrained for privacy reasons.
 	CASE WHEN max(age) < 80 THEN max(age) ELSE 80 as max_age
 	-- Your summary may include measures
 	-- from the query library, or you can

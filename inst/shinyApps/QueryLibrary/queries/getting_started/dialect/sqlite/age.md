@@ -9,7 +9,7 @@ CDM Version:5.4
 
 
 
-Use Case:Measure
+Use Case:Characteristic
 
 
 -->

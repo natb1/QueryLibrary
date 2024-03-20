@@ -12,6 +12,10 @@ CDM Version:5.4
 Use Case:Getting Started
 
 
+
+_Short:PGNvZGUgY2xhc3M9InNxbCI+LS0gVGhlIFF1ZXJ5TGlicmFyeSBpcyBqdXN0IFNRTCB1c2luZyB0aGUgQ29tbW9uIERhdGEgTW9kZWwgKENETSkuClNFTEVDVCBDT1VOVCgqKSBBUyBwZXJzb25fY291bnQgRlJPTSBwZXJzb24KLS0gUGhlbm90eXBlIHF1ZXJpZXMuCklOTkVSIEpPSU4gZmVtYWxlIFVTSU5HIGdlbmRlcl9jb25jZXB0X2lkCklOTkVSIEpPSU4gaGl2IFVTSU5HIHBlcnNvbl9pZAotLSBQb3B1bGF0aW9uIGNoYXJhY3RlcmlzdGljcy4KTEVGVCBKT0lOIGFnZSBVU0lORyBwZXJzb25faWQKV0hFUkUgYWdlID4gQG1pbl9hZ2UKPC9jb2RlPiAuLi4=
+
+
 -->
 
 # Getting Started
@@ -36,7 +40,8 @@ SELECT COUNT(*) AS person_count FROM person
 
 -- Common Table Expressions (CTEs)
 -- can be used to write concise queries
--- by decomposing them into smaller subqueries.
+-- by decomposing them into smaller subqueries,
+-- for example phenotype queries.
 INNER JOIN female USING gender_concept_id
 INNER JOIN hiv USING person_id
 

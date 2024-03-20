@@ -12,11 +12,15 @@ CDM Version:5.4
 Use Case:Getting Started
 
 
+
+_Short:PGNvZGUgY2xhc3M9InNxbCI+LS0gSU5ORVIgSk9JTiBpcyBzbyBuYW1lZCBiZWNhdXNlIGl0IGlzIGFuYWxvZ291cwotLSB0byBmaW5kaW5nIHRoZSBpbnRlcnNlY3Rpb24gb2YgdHdvIG9yIG1vcmUgc2V0cy4KLS0gU2VlIHRoZSBsaW5rZWQgcXVlcmllcyBpbiB0aGUgQ1RFIHNlY3Rpb24KLS0gdG8gdW5kZXJzdGFuZCBob3cgdGhlc2Ugc3Vic2V0cyBhcmUgY3JlYXRlZC4KLS0gVGhlIFF1ZXJ5TGlicmFyeSBpbmNsdWRlcyBtYW55IHByZWJ1aWx0IHF1ZXJpZXMKLS0gZm9yIHRoaXMsIGluY2x1ZGluZyB0aGUgT0hEU0kgcGhlbm90eXBlIGxpYnJhcnkuCklOTkVSIEpPSU4gZmVtYWxlIFVTSU5HIGdlbmRlcl9jb25jZXB0X2lkCklOTkVSIEpPSU4gaGl2IFVTSU5HIHBlcnNvbl9pZAo8L2NvZGU+IC4uLg==
+
+
 -->
 
 # Getting Started: Part 2
 
-### Population Set Operations
+### Cohort Inclusion Criteria
 
 
 
@@ -30,6 +34,7 @@ Use Case:Getting Started
  
 ## Query
 ```sql
+-- 
 SELECT COUNT(*) AS person_count FROM person
 
 -- INNER JOIN is so named because it is analogous
