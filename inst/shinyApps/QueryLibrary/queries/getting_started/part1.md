@@ -13,7 +13,7 @@ Use Case:Getting Started
 
 
 
-_Short:PGNvZGUgY2xhc3M9InNxbCI+LS0gVGhlIFF1ZXJ5TGlicmFyeSBpcyBqdXN0IFNRTCB1c2luZyB0aGUgQ29tbW9uIERhdGEgTW9kZWwgKENETSkuClNFTEVDVCBDT1VOVCgqKSBBUyBwZXJzb25fY291bnQgRlJPTSBwZXJzb24KLS0gUGhlbm90eXBlIHF1ZXJpZXMuCklOTkVSIEpPSU4gZmVtYWxlIFVTSU5HIGdlbmRlcl9jb25jZXB0X2lkCklOTkVSIEpPSU4gaGl2IFVTSU5HIHBlcnNvbl9pZAotLSBQb3B1bGF0aW9uIGNoYXJhY3RlcmlzdGljcy4KTEVGVCBKT0lOIGFnZSBVU0lORyBwZXJzb25faWQKV0hFUkUgYWdlID4gQG1pbl9hZ2UKPC9jb2RlPiAuLi4=
+_Short:PHByZT48Y29kZSBjbGFzcz0ic3FsIj4tLSBUaGUgUXVlcnlMaWJyYXJ5IGlzIGp1c3QgU1FMIHVzaW5nIHRoZSBDb21tb24gRGF0YSBNb2RlbCAoQ0RNKS4KU0VMRUNUIENPVU5UKCopIEFTIHBlcnNvbl9jb3VudCBGUk9NIHBlcnNvbgotLSBQaGVub3R5cGUgcXVlcmllcy4KSU5ORVIgSk9JTiBmZW1hbGUgVVNJTkcgZ2VuZGVyX2NvbmNlcHRfaWQKSU5ORVIgSk9JTiBoaXYgVVNJTkcgcGVyc29uX2lkCi0tIFBvcHVsYXRpb24gY2hhcmFjdGVyaXN0aWNzLgpMRUZUIEpPSU4gYWdlIFVTSU5HIHBlcnNvbl9pZApXSEVSRSBhZ2UgPiBAbWluX2FnZQo8L2NvZGU+IC4uLjwvcHJlPg==
 
 
 -->
@@ -117,7 +117,7 @@ A full technical specification is available [here](./spec.md)
 and may be useful for building applications that
 read these documents.
 
-> See also: [The Book of OHDSI: SQL and R](https://ohdsi.github.io/TheBookOfOhdsi/SqlAndR.html)
+> See also: <a target="_blank" href="https://ohdsi.github.io/TheBookOfOhdsi/SqlAndR.html">The Book of OHDSI: SQL and R</a>
 
 Adding queries which use the OHDSI common data model (CDM)
 to the query library, and referencing them in your 
