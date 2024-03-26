@@ -117,6 +117,8 @@ A full technical specification is available [here](./spec.md)
 and may be useful for building applications that
 read these documents.
 
+> See also: [The Book of OHDSI: SQL and R](https://ohdsi.github.io/TheBookOfOhdsi/SqlAndR.html)
+
 Adding queries which use the OHDSI common data model (CDM)
 to the query library, and referencing them in your 
 applications has several benefits:
