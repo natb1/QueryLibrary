@@ -83,9 +83,9 @@ references a CTE
 `foo` is considered to be
 equivalent to the following subqeury:
 ```
-SELECT * FROM person
-LEFT JOIN foo
-WHERE foo.person_id != NULL
+SELECT person_id FROM person
+LEFT JOIN foo USING (person_id)
+WHERE foo.person_id == NULL
 ```
 
 ## Tags
@@ -93,7 +93,7 @@ Additional metadata can also be added to these
 documents by including an [html comment](https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/Getting_started#html_comments)
 as the header
 of the document with newline separated
-` + "`" + `key:value` + "`" + ` pairs. It is assumed that
+`key:value` pairs. It is assumed that
 these pairs will have whitespace trimmed during parsing.
 
 Tags allow the markdown spec to be extended
