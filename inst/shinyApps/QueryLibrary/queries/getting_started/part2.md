@@ -34,40 +34,7 @@ _Short:PHByZT48Y29kZSBjbGFzcz0ic3FsIj4tLSBJTk5FUiBKT0lOIGlzIHNvIG5hbWVkIGJlY2F1c
  
 ## Query
 ```sql
--- 
-SELECT COUNT(*) AS person_count FROM person
-
--- INNER JOIN is so named because it is analogous
--- to finding the intersection of two or more sets.
--- See the linked queries in the CTE section
--- to understand how these subsets are created.
--- The QueryLibrary includes many prebuilt queries
--- for this, including the OHDSI phenotype library.
-INNER JOIN female USING gender_concept_id
-INNER JOIN hiv USING person_id
-
--- Note:
--- All SQL dialects have multiple ways of representing
--- set operations and the implementation may have a
--- performance impact that differs depending
--- on your data platform. The SQL syntax
--- here is generally performant, and doesn't rely
--- on features of any one dialect.
-
--- The most concise way to create exclusion criteria would
--- be to INNER JOIN a suqquery that is the "anti-set", 
--- ex. "not insured":
-INNER JOIN uninsured USING person_id
-
--- Or, if doing so is inconvenient,
--- this syntax is more verbose, but more 
--- flexible and supported by all SQL dialects.
--- The ## CTE Exclusion section can be used 
--- as a shorthand for the syntax below
--- while writing the more concise INNER JOIN syntax above.
--- See the ## CTE Exclusion section below for an example.
-LEFT JOIN insured USING person_id
-WHERE insured.person_id IS NULL
+{[--  COUNT FROM -- INNER JOIN is so named because it is analogous -- to finding the intersection of two or more sets. -- See the linked queries in the CTE section -- to understand how these subsets are created. -- The QueryLibrary includes many prebuilt queries -- for this, including the OHDSI phenotype library. -- Note: -- All SQL dialects have multiple ways of representing -- set operations and the implementation may have a -- performance impact that differs depending -- on your data platform. The SQL syntax -- here is generally performant, and doesn't rely -- on features of any one dialect. -- The most concise way to create exclusion criteria would -- be to INNER JOIN a suqquery that is the "anti-set",  -- ex. "not insured": -- Or, if doing so is inconvenient, -- this syntax is more verbose, but more  -- flexible and supported by all SQL dialects. -- The ## CTE Exclusion section can be used  -- as a shorthand for the syntax below -- while writing the more concise INNER JOIN syntax above. -- See the ## CTE Exclusion section below for an example.]}
 ```
 
 

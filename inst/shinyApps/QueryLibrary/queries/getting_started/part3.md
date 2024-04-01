@@ -34,41 +34,7 @@ _Short:PHByZT48Y29kZSBjbGFzcz0ic3FsIj4tLSBXT1JLIElOIFBST0dSRVNTCi0tIDEuIEFncmVlI
  
 ## Query
 ```sql
-SELECT
-
-  -- WORK IN PROGRESS
-
-	-- 1. Agree on the "dimensions" of your
-	--    database characterization with your data partners.
-	--    You may choose from these dimensions to stratify
-	--    your measures when analysing the data.
-	gender,
-	-- WIP: full cohort entry exit criteria etc.
-	acetaminophen_dosage_month,
-
-	-- 2. Agree on the measures to share.
-	--    For example, share the distribution of
-	--    of person ages across the chosen dimensions.
-	min(age) AS min_age,
-	-- These measures may be constrained for privacy reasons.
-	CASE WHEN max(age) < 80 THEN max(age) ELSE 80 as max_age
-	-- Your summary may include measures
-	-- from the query library, or you can
-	-- create your own.
-	sum(acetaminophen_dosage) AS sum_acetaminophen_dosage
-	-- Note: while "count" is decomposable
-	-- "distinct count" is not.
-	COUNT(acetaminophen_dosage.person_id) AS acetaminophen_person_count
-
--- The rest is SQL boilerplate.
-FROM person
-	LEFT JOIN acetaminophen_dosage USING person_id
-	LEFT JOIN age USING person_id
-	LEFT JOIN gender USING gender_concept_id
-
-GROUP BY
-	gender,
-	acetaminophen_dosage_month
+{[-- WORK IN PROGRESS -- 1. Agree on the "dimensions" of your --    database characterization with your data partners. --    You may choose from these dimensions to stratify --    your measures when analysing the data. -- WIP: full cohort entry exit criteria etc. -- 2. Agree on the measures to share. --    For example, share the distribution of --    of person ages across the chosen dimensions. min -- These measures may be constrained for privacy reasons. max max -- Your summary may include measures -- from the query library, or you can -- create your own. sum -- Note: while "count" is decomposable -- "distinct count" is not. -- The rest is SQL boilerplate. FROM]}
 ```
 
 

@@ -28,10 +28,7 @@ Use Case:Characteristic
  
 ## Query
 ```sql
-SELECT 
-	person_id,
-	DATEDIFF(year, birth_datetime, GETDATE()) as age
-FROM person
+{[DATEDIFF GETDATE FROM]}
 ```
 
 

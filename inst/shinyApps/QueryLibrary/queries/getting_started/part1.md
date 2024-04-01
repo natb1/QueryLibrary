@@ -13,6 +13,10 @@ Use Case:Getting Started
 
 
 
+_Order:Query,Common Table Expression (CTE),Input,Output,Example output record,Description
+
+
+
 _Short:PHByZT48Y29kZSBjbGFzcz0ic3FsIj4tLSBUaGUgUXVlcnlMaWJyYXJ5IGlzIGp1c3QgU1FMIHVzaW5nIHRoZSBDb21tb24gRGF0YSBNb2RlbCAoQ0RNKS4KU0VMRUNUIENPVU5UKCopIEFTIHBlcnNvbl9jb3VudCBGUk9NIHBlcnNvbgotLSBQaGVub3R5cGUgcXVlcmllcy4KSU5ORVIgSk9JTiBmZW1hbGUgVVNJTkcgZ2VuZGVyX2NvbmNlcHRfaWQKSU5ORVIgSk9JTiBoaXYgVVNJTkcgcGVyc29uX2lkCi0tIFBvcHVsYXRpb24gY2hhcmFjdGVyaXN0aWNzLgpMRUZUIEpPSU4gYWdlIFVTSU5HIHBlcnNvbl9pZApXSEVSRSBhZ2UgPiBAbWluX2FnZQo8L2NvZGU+IC4uLjwvcHJlPg==
 
 
@@ -34,24 +38,7 @@ _Short:PHByZT48Y29kZSBjbGFzcz0ic3FsIj4tLSBUaGUgUXVlcnlMaWJyYXJ5IGlzIGp1c3QgU1FMI
  
 ## Query
 ```sql
--- The QueryLibrary is just SQL using the 
--- Common Data Model (CDM).
-SELECT COUNT(*) AS person_count FROM person
-
--- Common Table Expressions (CTEs)
--- can be used to write concise queries
--- by decomposing them into smaller subqueries,
--- for example phenotype queries.
-INNER JOIN female USING gender_concept_id
-INNER JOIN hiv USING person_id
-
--- CTEs can isolate logic from different SQL dialects.
--- See the links for the age "alias" in the next section.
-LEFT JOIN age USING person_id
-
--- Input parameters allow the query to be 
--- used as a template.
-WHERE age > @min_age
+{[-- The QueryLibrary is just SQL using the  -- Common Data Model (CDM). COUNT FROM -- Common Table Expressions (CTEs) -- can be used to write concise queries -- by decomposing them into smaller subqueries, -- for example phenotype queries. -- CTEs can isolate logic from different SQL dialects. -- See the links for the age "alias" in the next section. -- Input parameters allow the query to be  -- used as a template.]}
 ```
 
 
