@@ -38,7 +38,25 @@ _Short:PHByZT48Y29kZSBjbGFzcz0ic3FsIj4tLSBUaGUgUXVlcnlMaWJyYXJ5IGlzIGp1c3QgU1FMI
  
 ## Query
 ```sql
-{[-- The QueryLibrary is just SQL using the  -- Common Data Model (CDM). COUNT FROM -- Common Table Expressions (CTEs) -- can be used to write concise queries -- by decomposing them into smaller subqueries, -- for example phenotype queries. -- CTEs can isolate logic from different SQL dialects. -- See the links for the age "alias" in the next section. -- Input parameters allow the query to be  -- used as a template.]}
+-- The QueryLibrary is just SQL using the 
+-- Common Data Model (CDM).
+SELECT COUNT(*) AS person_count, foo 
+FROM person
+
+-- Common Table Expressions (CTEs)
+-- can be used to write concise queries
+-- by decomposing them into smaller subqueries,
+-- for example phenotype queries.
+INNER JOIN female USING (person_id)
+INNER JOIN hiv USING (person_id)
+
+-- CTEs can isolate logic from different SQL dialects.
+-- See the links for the age "alias" in the next section.
+LEFT JOIN age USING (person_id)
+
+-- Input parameters allow the query to be 
+-- used as a template.
+WHERE age > @min_age
 ```
 
 

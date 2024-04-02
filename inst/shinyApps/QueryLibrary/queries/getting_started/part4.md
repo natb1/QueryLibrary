@@ -53,7 +53,27 @@ these partners in a particular study.
 		 
 ## Query
 ```sql
-{[FROM FROM FROM FROM -- At least 100 persons with acetaminophen dosage -- for each of the given months, for each of the -- given genders. min]}
+
+SELECT partner AS eligible_partner
+FROM (
+	SELECT *, "eunomia" AS partner FROM eunomia_partner
+	UNION ALL 
+	SELECT *, "sythea" AS partner FROM synthea_partner
+	UNION ALL 
+	SELECT *, "mimic" AS partner FROM mimic_partner
+)
+
+-- At least 100 persons with acetaminophen dosage
+-- for each of the given months, for each of the
+-- given genders.
+WHERE
+	month > "2020-01"
+	AND (
+		gender_concept_name IN ("Male", "Female")
+	)
+GROUP BY partner
+HAVING min(acetaminophen_person_count) > 100
+  
 ```
 
 

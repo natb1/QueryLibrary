@@ -28,7 +28,7 @@ Use Case:Phenotype
  
 ## Query
 ```sql
-{[FROM]}
+SELECT concept_id AS gender_concept_id, concept_name AS gender_concept_name FROM concept WHERE concept_id = 8532
 ```
 
 

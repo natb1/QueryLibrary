@@ -28,7 +28,12 @@ Use Case:Phenotype
  
 ## Query
 ```sql
-{[FROM]}
+SELECT 
+	person_id,
+	concept_name AS gender_concept_name 
+FROM person
+	LEFT JOIN concept
+		ON person.gender_concept_id = concept.concept_id
 ```
 
 
