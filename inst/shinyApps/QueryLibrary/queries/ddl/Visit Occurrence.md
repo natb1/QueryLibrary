@@ -1,22 +1,10 @@
-<!--
-
--->
+<!---->
 
 # Visit Occurrence
 
-
-
-
-
-
-
-
-
-
- 
-
 ## Description
 This table contains Events where Persons engage with the healthcare system for a duration of time. They are often also called "Encounters". Visits are defined by a configuration of circumstances under which they occur, such as (i) whether the patient comes to a healthcare institution, the other way around, or the interaction is remote, (ii) whether and what kind of trained medical staff is delivering the service during the Visit, and (iii) whether the Visit is transient or for a longer period involving a stay in bed.
+
 ### User Guidance
 The configuration defining the Visit are described by Concepts in the Visit Domain, which form a hierarchical structure, but rolling up to generally familiar Visits adopted in most healthcare systems worldwide:
 
@@ -34,39 +22,38 @@ The configuration defining the Visit are described by Concepts in the Visit Doma
 
 The Visit duration, or 'length of stay', is defined as VISIT_END_DATE - VISIT_START_DATE. For all Visits this is <1 day, except Inpatient Visits and Non-hospital institution Visits. The CDM also contains the VISIT_DETAIL table where additional information about the Visit is stored, for example, transfers between units during an inpatient Visit.
 
+### Etl Conventions
+Visits can be derived easily if the source data contain coding systems for Place of Service or Procedures, like CPT codes for well visits. In those cases, the codes can be looked up and mapped to a Standard Visit Concept. Otherwise, Visit Concepts have to be identified in the ETL process. This table will contain concepts in the Visit domain. These concepts are arranged in a hierarchical structure to facilitate cohort definitions by rolling up to generally familiar Visits adopted in most healthcare systems worldwide. Visits can be adjacent to each other, i.e. the end date of one can be identical with the start date of the other. As a consequence, more than one-day Visits or their descendants can be recorded for the same day. Multi-day visits must not overlap, i.e. share days other than start and end days. It is often the case that some logic should be written for how to define visits and how to assign Visit_Concept_Id. For example, in US claims outpatient visits that appear to occur within the time period of an inpatient visit can be rolled into one with the same Visit_Occurrence_Id. In EHR data inpatient visits that are within one day of each other may be strung together to create one visit. It will all depend on the source data and how encounter records should be translated to visit occurrences. Providers can be associated with a Visit through the PROVIDER_ID field, or indirectly through PROCEDURE_OCCURRENCE records linked both to the VISIT and PROVIDER tables.
 
-
- 
 ## Query
 ```sql
-CD
+CREATE TABLE Visit Occurrence (
+	visit_occurrence_id integer NOT NULL,
+	person_id integer NOT NULL,
+	visit_concept_id integer NOT NULL,
+	visit_start_date date NOT NULL,
+	visit_start_datetime datetime NOT NULL,
+	visit_end_date date NOT NULL,
+	visit_end_datetime datetime NOT NULL,
+	visit_type_concept_id Integer NOT NULL,
+	provider_id integer NOT NULL,
+	care_site_id integer NOT NULL,
+	visit_source_value varchar(50) NOT NULL,
+	visit_source_concept_id integer NOT NULL,
+	admitted_from_concept_id integer NOT NULL,
+	admitted_from_source_value varchar(50) NOT NULL,
+	discharged_to_concept_id integer NOT NULL,
+	discharged_to_source_value varchar(50) NOT NULL,
+	preceding_visit_occurrence_id integer NOT NULL
+)
 ```
-
-
-
-
-
-
-
-
- 
 
 ## Input
 
 
-
-
- 
-
 ## Output
 
 
-
- 
-
 ## Example output record
-
-
-
 
 
