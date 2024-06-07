@@ -27,7 +27,7 @@ Visits can be derived easily if the source data contain coding systems for Place
 
 ## Query
 ```sql
-CREATE TABLE Visit Occurrence (
+CREATE TABLE visit_occurrence (
 	visit_occurrence_id integer NOT NULL,
 	person_id integer NOT NULL,
 	visit_concept_id integer NOT NULL,

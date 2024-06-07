@@ -13,7 +13,7 @@ Source codes and source text fields mapped to Standard Concepts of the Device Do
 
 ## Query
 ```sql
-CREATE TABLE Device Exposure (
+CREATE TABLE device_exposure (
 	device_exposure_id integer NOT NULL,
 	person_id integer NOT NULL,
 	device_concept_id integer NOT NULL,

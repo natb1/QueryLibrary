@@ -23,7 +23,7 @@ However, not all the permutations of the CDO dimensions will necessarily yield a
 
 ## Query
 ```sql
-CREATE TABLE Note (
+CREATE TABLE note (
 	note_id integer NOT NULL,
 	person_id integer NOT NULL,
 	note_date date NOT NULL,

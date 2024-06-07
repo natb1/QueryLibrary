@@ -13,7 +13,7 @@ NA
 
 ## Query
 ```sql
-CREATE TABLE Metadata (
+CREATE TABLE metadata (
 	metadata_id integer NOT NULL,
 	metadata_concept_id integer NOT NULL,
 	metadata_type_concept_id integer NOT NULL,

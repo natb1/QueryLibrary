@@ -9,11 +9,11 @@ The death domain contains the clinical event for how and when a Person dies. A p
 NA
 
 ### Etl Conventions
-NA
+For specific conventions on how to populate this table, please refer to the [THEMIS repository](https://ohdsi.github.io/Themis/death.html).
 
 ## Query
 ```sql
-CREATE TABLE Death (
+CREATE TABLE death (
 	person_id integer NOT NULL,
 	death_date date NOT NULL,
 	death_datetime datetime NOT NULL,

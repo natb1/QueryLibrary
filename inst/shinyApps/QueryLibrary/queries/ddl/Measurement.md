@@ -13,7 +13,7 @@ Only records where the source value maps to a Concept in the measurement domain 
 
 ## Query
 ```sql
-CREATE TABLE Measurement (
+CREATE TABLE measurement (
 	measurement_id integer NOT NULL,
 	person_id integer NOT NULL,
 	measurement_concept_id integer NOT NULL,

@@ -15,7 +15,7 @@ One cost record is generated for each response by a payer. In a claims databases
 
 ## Query
 ```sql
-CREATE TABLE Cost (
+CREATE TABLE cost (
 	cost_id integer NOT NULL,
 	cost_event_id integer NOT NULL,
 	cost_domain_id varchar(20) NOT NULL,

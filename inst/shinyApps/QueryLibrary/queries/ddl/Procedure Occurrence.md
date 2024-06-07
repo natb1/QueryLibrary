@@ -13,7 +13,7 @@ When dealing with duplicate records, the ETL must determine whether to sum them 
 
 ## Query
 ```sql
-CREATE TABLE Procedure Occurrence (
+CREATE TABLE procedure_occurrence (
 	procedure_occurrence_id integer NOT NULL,
 	person_id integer NOT NULL,
 	procedure_concept_id integer NOT NULL,

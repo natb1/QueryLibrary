@@ -13,7 +13,7 @@ Source codes and source text fields mapped to Standard Concepts of the Condition
 
 ## Query
 ```sql
-CREATE TABLE Condition Occurrence (
+CREATE TABLE condition_occurrence (
 	condition_occurrence_id integer NOT NULL,
 	person_id integer NOT NULL,
 	condition_concept_id integer NOT NULL,

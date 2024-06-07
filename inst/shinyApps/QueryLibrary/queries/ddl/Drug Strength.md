@@ -13,7 +13,7 @@ NA
 
 ## Query
 ```sql
-CREATE TABLE Drug Strength (
+CREATE TABLE drug_strength (
 	drug_concept_id integer NOT NULL,
 	ingredient_concept_id integer NOT NULL,
 	amount_value float NOT NULL,

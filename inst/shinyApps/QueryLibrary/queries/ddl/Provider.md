@@ -3,17 +3,17 @@
 # Provider
 
 ## Description
-The PROVIDER table contains a list of uniquely identified healthcare providers. These are individuals providing hands-on healthcare to patients, such as physicians, nurses, midwives, physical therapists etc.
+The PROVIDER table contains a list of uniquely identified healthcare providers; duplication is not allowed. These are individuals providing hands-on healthcare to patients, such as physicians, nurses, midwives, physical therapists etc.
 
 ### User Guidance
-Many sources do not make a distinction between individual and institutional providers. The PROVIDER table contains the individual providers. If the source, instead of uniquely identifying individual providers, only provides limited information such as specialty, generic or 'pooled' Provider records are listed in the PROVIDER table.
+Many sources do not make a distinction between individual and institutional providers. The PROVIDER table contains the individual providers. If the source only provides limited information such as specialty instead of uniquely identifying individual providers, generic or 'pooled' Provider records are listed in the PROVIDER table.
 
 ### Etl Conventions
 NA
 
 ## Query
 ```sql
-CREATE TABLE Provider (
+CREATE TABLE provider (
 	provider_id integer NOT NULL,
 	provider_name varchar(255) NOT NULL,
 	npi varchar(20) NOT NULL,

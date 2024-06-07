@@ -13,7 +13,7 @@ NA
 
 ## Query
 ```sql
-CREATE TABLE Payer Plan Period (
+CREATE TABLE payer_plan_period (
 	payer_plan_period_id integer NOT NULL,
 	person_id integer NOT NULL,
 	payer_plan_period_start_date date NOT NULL,

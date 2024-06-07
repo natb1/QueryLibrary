@@ -13,7 +13,7 @@ Dose Eras will be derived from records in the DRUG_EXPOSURE table and the Dose i
 
 ## Query
 ```sql
-CREATE TABLE Dose Era (
+CREATE TABLE dose_era (
 	dose_era_id integer NOT NULL,
 	person_id integer NOT NULL,
 	drug_concept_id integer NOT NULL,

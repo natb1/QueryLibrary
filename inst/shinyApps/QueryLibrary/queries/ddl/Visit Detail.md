@@ -13,7 +13,7 @@ It is not mandatory that the VISIT_DETAIL table be filled in, but if you find th
 
 ## Query
 ```sql
-CREATE TABLE Visit Detail (
+CREATE TABLE visit_detail (
 	visit_detail_id integer NOT NULL,
 	person_id integer NOT NULL,
 	visit_detail_concept_id integer NOT NULL,

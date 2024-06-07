@@ -15,7 +15,7 @@ NA
 
 ## Query
 ```sql
-CREATE TABLE Concept Ancestor (
+CREATE TABLE concept_ancestor (
 	ancestor_concept_id integer NOT NULL,
 	descendant_concept_id integer NOT NULL,
 	min_levels_of_separation integer NOT NULL,

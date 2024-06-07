@@ -9,11 +9,11 @@ The CARE_SITE table contains a list of uniquely identified institutional (physic
 NA
 
 ### Etl Conventions
-Care site is a unique combination of location_id and place_of_service_source_value. Care site does not take into account the provider (human) information such a specialty. Many source data do not make a distinction between individual and institutional providers. The CARE_SITE table contains the institutional providers. If the source, instead of uniquely identifying individual Care Sites, only provides limited information such as Place of Service, generic or "pooled" Care Site records are listed in the CARE_SITE table. There can be hierarchical and business relationships between Care Sites. For example, wards can belong to clinics or departments, which can in turn belong to hospitals, which in turn can belong to hospital systems, which in turn can belong to HMOs.The relationships between Care Sites are defined in the FACT_RELATIONSHIP table.
+Care site is a unique combination of location_id and nature of the site - the latter could be the place of service, name, or another characteristic in your source data. Care site does not take into account the provider (human) information such a specialty. Many source data do not make a distinction between individual and institutional providers. The CARE_SITE table contains the institutional providers. If the source, instead of uniquely identifying individual Care Sites, only provides limited information such as Place of Service, generic or "pooled" Care Site records are listed in the CARE_SITE table. There can be hierarchical and business relationships between Care Sites. For example, wards can belong to clinics or departments, which can in turn belong to hospitals, which in turn can belong to hospital systems, which in turn can belong to HMOs.The relationships between Care Sites are defined in the FACT_RELATIONSHIP table.<br><br>For additional detailed conventions on how to populate this table, please refer to [THEMIS repository](https://ohdsi.github.io/Themis/care_site.html).
 
 ## Query
 ```sql
-CREATE TABLE Care Site (
+CREATE TABLE care_site (
 	care_site_id integer NOT NULL,
 	care_site_name varchar(255) NOT NULL,
 	place_of_service_concept_id integer NOT NULL,

@@ -13,7 +13,7 @@ NA
 
 ## Query
 ```sql
-CREATE TABLE Cdm Source (
+CREATE TABLE cdm_source (
 	cdm_source_name varchar(255) NOT NULL,
 	cdm_source_abbreviation varchar(25) NOT NULL,
 	cdm_holder varchar(255) NOT NULL,

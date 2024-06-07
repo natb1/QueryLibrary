@@ -3,7 +3,7 @@
 # Condition Era
 
 ## Description
-A Condition Era is defined as a span of time when the Person is assumed to have a given condition. Similar to Drug Eras, Condition Eras are chronological periods of Condition Occurrence. Combining individual Condition Occurrences into a single Condition Era serves two purposes:
+A Condition Era is defined as a span of time when the Person is assumed to have a given condition. Similar to Drug Eras, Condition Eras are chronological periods of Condition Occurrence and every Condition Occurrence record should be part of a Condition Era. Combining individual Condition Occurrences into a single Condition Era serves two purposes:
 
 - It allows aggregation of chronic conditions that require frequent ongoing care, instead of treating each Condition Occurrence as an independent event.
 - It allows aggregation of multiple, closely timed doctor visits for the same Condition to avoid double-counting the Condition Occurrences.
@@ -20,7 +20,7 @@ The Condition Era End Date is the end date of the last Condition Occurrence. Con
 
 ## Query
 ```sql
-CREATE TABLE Condition Era (
+CREATE TABLE condition_era (
 	condition_era_id integer NOT NULL,
 	person_id integer NOT NULL,
 	condition_concept_id integer NOT NULL,

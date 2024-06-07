@@ -13,7 +13,7 @@ Each address or Location is unique and is present only once in the table. Locati
 
 ## Query
 ```sql
-CREATE TABLE Location (
+CREATE TABLE location (
 	location_id integer NOT NULL,
 	address_1 varchar(50) NOT NULL,
 	address_2 varchar(50) NOT NULL,

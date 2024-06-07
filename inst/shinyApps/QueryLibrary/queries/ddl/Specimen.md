@@ -13,7 +13,7 @@ Anatomic site is coded at the most specific level of granularity possible, such 
 
 ## Query
 ```sql
-CREATE TABLE Specimen (
+CREATE TABLE specimen (
 	specimen_id integer NOT NULL,
 	person_id integer NOT NULL,
 	specimen_concept_id integer NOT NULL,

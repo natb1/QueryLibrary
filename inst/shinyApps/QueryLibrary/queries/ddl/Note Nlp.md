@@ -13,7 +13,7 @@ NA
 
 ## Query
 ```sql
-CREATE TABLE Note Nlp (
+CREATE TABLE note_nlp (
 	note_nlp_id integer NOT NULL,
 	note_id integer NOT NULL,
 	section_concept_id integer NOT NULL,

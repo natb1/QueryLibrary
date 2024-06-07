@@ -3,7 +3,7 @@
 # Cohort
 
 ## Description
-The COHORT table contains records of subjects that satisfy a given set of criteria for a duration of time. The definition of the cohort is contained within the COHORT_DEFINITION table. It is listed as part of the RESULTS schema because it is a table that users of the database as well as tools such as ATLAS need to be able to write to. The CDM and Vocabulary tables are all read-only so it is suggested that the COHORT and COHORT_DEFINTION tables are kept in a separate schema to alleviate confusion.
+The subject of a cohort can have multiple, discrete records in the cohort table per cohort_definition_id, subject_id, and non-overlapping time periods. The definition of the cohort is contained within the COHORT_DEFINITION table. It is listed as part of the RESULTS schema because it is a table that users of the database as well as tools such as ATLAS need to be able to write to. The CDM and Vocabulary tables are all read-only so it is suggested that the COHORT and COHORT_DEFINTION tables are kept in a separate schema to alleviate confusion.
 
 ### User Guidance
 NA
@@ -13,7 +13,7 @@ Cohorts typically include patients diagnosed with a specific condition, patients
 
 ## Query
 ```sql
-CREATE TABLE Cohort (
+CREATE TABLE cohort (
 	cohort_definition_id integer NOT NULL,
 	subject_id integer NOT NULL,
 	cohort_start_date date NOT NULL,

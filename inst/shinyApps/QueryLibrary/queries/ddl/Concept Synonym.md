@@ -13,7 +13,7 @@ NA
 
 ## Query
 ```sql
-CREATE TABLE Concept Synonym (
+CREATE TABLE concept_synonym (
 	concept_id integer NOT NULL,
 	concept_synonym_name varchar(1000) NOT NULL,
 	language_concept_id integer NOT NULL

@@ -13,7 +13,7 @@ NA
 
 ## Query
 ```sql
-CREATE TABLE Episode (
+CREATE TABLE episode (
 	episode_id integer NOT NULL,
 	person_id integer NOT NULL,
 	episode_concept_id integer NOT NULL,

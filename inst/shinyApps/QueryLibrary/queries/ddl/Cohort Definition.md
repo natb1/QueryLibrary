@@ -13,7 +13,7 @@ NA
 
 ## Query
 ```sql
-CREATE TABLE Cohort Definition (
+CREATE TABLE cohort_definition (
 	cohort_definition_id integer NOT NULL,
 	cohort_definition_name varchar(255) NOT NULL,
 	cohort_definition_description varchar(MAX) NOT NULL,

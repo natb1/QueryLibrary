@@ -13,7 +13,7 @@ Some episodes may not have links to any underlying clinical events. For such epi
 
 ## Query
 ```sql
-CREATE TABLE Episode Event (
+CREATE TABLE episode_event (
 	episode_id integer NOT NULL,
 	event_id integer NOT NULL,
 	episode_event_field_concept_id integer NOT NULL

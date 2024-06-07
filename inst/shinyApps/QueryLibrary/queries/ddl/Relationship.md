@@ -13,7 +13,7 @@ NA
 
 ## Query
 ```sql
-CREATE TABLE Relationship (
+CREATE TABLE relationship (
 	relationship_id varchar(20) NOT NULL,
 	relationship_name varchar(255) NOT NULL,
 	is_hierarchical varchar(1) NOT NULL,
